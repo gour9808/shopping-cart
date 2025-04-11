@@ -1,0 +1,13 @@
+[
+    {
+      "id": 1,
+      "name": "Smartphone X1",
+      "type": "Phones",
+      "price": 299,
+      "rating": 4.5,
+      "description": "Powerful smartphone with amazing features.",
+      "imageUrl": "assets/images/phone.jpg",
+      "reviews": ["Great phone!", "Battery life is amazing."]
+    }
+  ]
+  
