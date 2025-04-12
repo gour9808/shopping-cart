@@ -9,5 +9,6 @@
         style="padding: 0.5rem; flex-grow: 1; max-width: 400px" />
     <button mat-icon-button (click)="goToCart()" style="margin-left: 1rem">
         <mat-icon>shopping_cart</mat-icon>
+        <span *ngIf="(cartCount$ | async) as count" class="badge">{{ count }}</span>
     </button>
 </header>
