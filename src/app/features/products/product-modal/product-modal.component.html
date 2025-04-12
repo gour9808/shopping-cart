@@ -1,0 +1,7 @@
+<h2>{{ data.name }}</h2>
+<img [src]="data.image" style="width: 100%">
+<p>{{ data.description }}</p>
+<ul>
+  <li *ngFor="let review of data.reviews">"{{ review }}"</li>
+</ul>
+<button mat-raised-button color="primary" (click)="addProductToCart()">Add to Cart</button>

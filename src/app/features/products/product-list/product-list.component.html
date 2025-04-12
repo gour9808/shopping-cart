@@ -1,0 +1,11 @@
+<div style="padding: 1rem">
+    <input [(ngModel)]="searchTerm" placeholder="Search..." (input)="filterProducts()" style="margin-bottom: 1rem; width: 100%; padding: 0.5rem">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem">
+      <app-product-card *ngFor="let product of pagedProducts" [product]="product"></app-product-card>
+    </div>
+    <div style="margin-top: 1rem; text-align: center">
+      <button mat-button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+      Page {{ currentPage }} of {{ totalPages }}
+      <button mat-button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+  </div>

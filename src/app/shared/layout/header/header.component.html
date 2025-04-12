@@ -1,0 +1,6 @@
+<header style="display: flex; align-items: center; padding: 1rem; background-color: #eee; justify-content: space-between">
+    <input [(ngModel)]="search" placeholder="Search products..." (input)="onSearch()" style="padding: 0.5rem; flex-grow: 1; max-width: 400px">
+    <button mat-icon-button (click)="goToCart()" style="margin-left: 1rem">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </header>

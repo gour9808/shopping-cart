@@ -1,13 +1,20 @@
 [
     {
       "id": 1,
-      "name": "Smartphone X1",
-      "type": "Phones",
-      "price": 299,
+      "name": "Bluetooth Speaker",
+      "price": 29.99,
       "rating": 4.5,
-      "description": "Powerful smartphone with amazing features.",
-      "imageUrl": "assets/images/phone.jpg",
-      "reviews": ["Great phone!", "Battery life is amazing."]
+      "image": "assets/images/speaker.jpg",
+      "description": "A powerful Bluetooth speaker with deep bass.",
+      "reviews": ["Great sound!", "Battery lasts long."]
+    },
+    {
+      "id": 2,
+      "name": "Wireless Headphones",
+      "price": 59.99,
+      "rating": 4.7,
+      "image": "assets/images/headphones.jpg",
+      "description": "Comfortable and clear wireless headphones.",
+      "reviews": ["Very comfortable", "Excellent sound"]
     }
   ]
-  
