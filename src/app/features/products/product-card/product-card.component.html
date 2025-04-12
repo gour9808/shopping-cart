@@ -1,6 +1,20 @@
-<div style="border: 1px solid #ccc; padding: 1rem; cursor: pointer" (click)="openModal()">
-    <img [src]="product.image" alt="" style="width: 100%">
-    <h3>{{ product.name }}</h3>
-    <p>Price: ${{ product.price }}</p>
-    <p>Rating: {{ product.rating }}</p>
+
+
+  <div class="grid">
+    <mat-card  class="product-card" (click)="openModal()" >
+      <img mat-card-image class="img" [src]="product.image" alt="Product image" style="height: 200px; width: auto;">
+      <mat-card-content>
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>${{ product.price }}</strong></p>
+        <p>
+            <span class="stars">
+              <mat-icon *ngFor="let star of [1,2,3,4,5]">
+                {{ star <= product.rating ? 'star' : 'star_border' }}
+              </mat-icon>
+            </span>
+            ({{ product.rating }})
+          </p>
+      </mat-card-content>
+    </mat-card>
   </div>

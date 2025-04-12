@@ -1,49 +1,58 @@
 <div style="padding: 1rem">
-    <div class="filters">
-        <label>
-            Category:
-            <select [(ngModel)]="filters.category" (change)="applyFilters()">
-                <option value="">All</option>
-                <option *ngFor="let category of uniqueCategories" [value]="category">
-                    {{ category }}
-                </option>
-            </select>
-        </label>
-        <label>
-            Min Price:
-            <input type="number" [(ngModel)]="filters.minPrice" (change)="applyFilters()" />
-        </label>
-        <label>
-            Max Price:
-            <input type="number" [(ngModel)]="filters.maxPrice" (change)="applyFilters()" />
-        </label>
-        <label>
-            Rating:
-            <select [(ngModel)]="filters.rating" (change)="applyFilters()">
-                <option value="">All</option>
-                <option *ngFor="let r of [1, 2, 3, 4, 5]" [value]="r">{{ r }}+</option>
-            </select>
-        </label>
 
-        <label>
-            Keyword:
-            <input type="text" [(ngModel)]="filters.keyword" (input)="applyFilters()"
-                placeholder="Search name or description" />
-        </label>
-    </div>
+  <div class="filters" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem">
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select [(ngModel)]="filters.category" (selectionChange)="applyFilters()">
+        <mat-option value="">All</mat-option>
+        <mat-option *ngFor="let category of uniqueCategories" [value]="category">{{ category }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Min Price</mat-label>
+      <input matInput type="number" [(ngModel)]="filters.minPrice" (change)="applyFilters()">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Max Price</mat-label>
+      <input matInput type="number" [(ngModel)]="filters.maxPrice" (change)="applyFilters()">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Rating</mat-label>
+      <mat-select [(ngModel)]="filters.rating" (selectionChange)="applyFilters()">
+        <mat-option value="">All</mat-option>
+        <mat-option *ngFor="let r of [1,2,3,4,5]" [value]="r">{{ r }}+</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" style="flex: 1; min-width: 200px;">
+      <mat-label>Keyword</mat-label>
+      <input matInput type="text" [(ngModel)]="filters.keyword" (input)="applyFilters()">
+    </mat-form-field>
+  </div>
+  
 
-    <div class="grid">
-        <app-product-card *ngFor="
+  <div class="grid">
+    <app-product-card
+      *ngFor="
         let product of filteredProducts.slice(startIndex, startIndex + pageSize)
-      " [product]="product"></app-product-card>
-    </div>
+      "
+      [product]="product"
+    ></app-product-card>
+  </div>
 
-    <div class="pagination" style="margin-top: 1rem; text-align: center">
-        <button mat-button (click)="prevPage()" [disabled]="startIndex === 0">
-            Previous
-        </button>
-        <button mat-button (click)="nextPage()" [disabled]="startIndex + pageSize >= filteredProducts.length">
-            Next
-        </button>
-    </div>
+  <div class="pagination" style="margin-top: 1rem; text-align: center">
+    <button mat-button (click)="prevPage()" [disabled]="startIndex === 0">
+      Previous
+    </button>
+    <button
+      mat-button
+      (click)="nextPage()"
+      [disabled]="startIndex + pageSize >= filteredProducts.length"
+    >
+      Next
+    </button>
+  </div>
 </div>

@@ -1,20 +1,192 @@
 [
     {
       "id": 1,
-      "name": "Bluetooth Speaker",
-      "price": 29.99,
+      "name": "Samsung 65-inch 4K Smart TV",
+      "description": "Enjoy ultra-high definition entertainment with this smart TV from Samsung. It features 4K resolution, HDR, and a sleek design for a modern living room.",
+      "price": 799.99,
+      "category": "Electronics",
       "rating": 4.5,
-      "image": "assets/images/speaker.jpg",
-      "description": "A powerful Bluetooth speaker with deep bass.",
-      "reviews": ["Great sound!", "Battery lasts long."]
+      "image": "assets/images/tv.jpg",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "rating": 5,
+          "text": "Amazing picture quality and smart features! Highly recommend."
+        },
+        {
+          "author": "Jane Smith",
+          "rating": 4,
+          "text": "Great TV, but the remote could be better. Overall, happy with the purchase."
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Wireless Headphones",
-      "price": 59.99,
+      "name": "Sony Noise Cancelling Headphones",
+      "description": "Experience immersive sound and noise cancellation with these premium Sony headphones, perfect for travel and everyday use.",
+      "price": 349.99,
+      "category": "Accessories",
       "rating": 4.7,
-      "image": "assets/images/headphones.jpg",
-      "description": "Comfortable and clear wireless headphones.",
-      "reviews": ["Very comfortable", "Excellent sound"]
+      "image": "assets/images/headphone.jpeg",
+      "reviews": [
+        {
+          "author": "Mark Lee",
+          "rating": 5,
+          "text": "Best noise cancelling headphones I've ever used. Worth every penny!"
+        },
+        {
+          "author": "Emily Turner",
+          "rating": 4,
+          "text": "Very comfortable and good sound quality, but a bit heavy for long listening sessions."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Apple MacBook Pro 16-inch",
+      "description": "The 16-inch MacBook Pro is a powerhouse designed for professionals. Equipped with Apple's M1 Pro chip, this laptop offers exceptional performance and long battery life.",
+      "price": 2399.99,
+      "category": "Computers",
+      "rating": 4.9,
+      "image": "assets/images/laptop.jpeg",
+      "reviews": [
+        {
+          "author": "Alice White",
+          "rating": 5,
+          "text": "Incredible performance and screen. A perfect laptop for content creators."
+        },
+        {
+          "author": "Chris Johnson",
+          "rating": 5,
+          "text": "Expensive, but worth it for the power and battery life. Very happy with my purchase."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Apple iPhone 13 Pro Max",
+      "description": "The iPhone 13 Pro Max features an incredible 6.7-inch display, triple-camera system, and the powerful A15 Bionic chip, delivering superior performance and battery life.",
+      "price": 1099.99,
+      "category": "Mobile Phones",
+      "rating": 4.8,
+      "image": "assets/images/phone.jpeg",
+      "reviews": [
+        {
+          "author": "David Green",
+          "rating": 5,
+          "text": "Best phone I've ever owned. The camera is exceptional!"
+        },
+        {
+          "author": "Sophia Brown",
+          "rating": 4,
+          "text": "The iPhone 13 Pro Max is great, but it's a bit heavy and bulky for me."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Dell XPS 13 Laptop",
+      "description": "This sleek Dell XPS 13 laptop comes with Intel's 11th gen processor and a stunning 13.4-inch display. Ideal for work or play, offering both power and portability.",
+      "price": 1199.99,
+      "category": "Computers",
+      "rating": 4.6,
+      "image": "assets/images/laptop.jpeg",
+      "reviews": [
+        {
+          "author": "Sarah Kim",
+          "rating": 5,
+          "text": "Excellent build quality and fast performance. I love the design!"
+        },
+        {
+          "author": "James Smith",
+          "rating": 4,
+          "text": "Good laptop, but it gets hot under load. Still, it's very fast and compact."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Bose QuietComfort 35 II",
+      "description": "Experience world-class noise cancellation with these Bose wireless headphones. Perfect for traveling, working, or enjoying music in peace.",
+      "price": 299.99,
+      "category": "Accessories",
+      "rating": 4.8,
+      "image": "assets/images/headphone.jpeg",
+      "reviews": [
+        {
+          "author": "Michael Scott",
+          "rating": 5,
+          "text": "These headphones are the best for blocking out noise and the sound quality is fantastic."
+        },
+        {
+          "author": "Anna Lopez",
+          "rating": 4,
+          "text": "Great sound, but they are a bit uncomfortable during long listening sessions."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Microsoft Surface Pro 7",
+      "description": "The Surface Pro 7 is a 2-in-1 laptop-tablet hybrid with excellent build quality and versatility, ideal for working professionals and creatives alike.",
+      "price": 749.99,
+      "category": "Computers",
+      "rating": 4.7,
+      "image": "assets/images/tab.jpg",
+      "reviews": [
+        {
+          "author": "Lucas Carter",
+          "rating": 5,
+          "text": "Amazing hybrid device. The tablet mode is perfect for drawing and note-taking."
+        },
+        {
+          "author": "Olivia Lee",
+          "rating": 4,
+          "text": "Good device, but I wish the battery lasted longer."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Fitbit Charge 4",
+      "description": "Keep track of your health and fitness with the Fitbit Charge 4. Featuring built-in GPS and heart rate tracking, it's the ultimate fitness tracker.",
+      "price": 129.99,
+      "category": "Wearables",
+      "rating": 4.4,
+      "image": "assets/images/smartwatch.jpg",
+      "reviews": [
+        {
+          "author": "Mia Harris",
+          "rating": 5,
+          "text": "Love the built-in GPS and heart rate monitor. It has everything I need for workouts."
+        },
+        {
+          "author": "Noah Evans",
+          "rating": 3,
+          "text": "The Fitbit Charge 4 is good, but I found it a bit too bulky for my wrist."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Sony PlayStation 5",
+      "description": "The Sony PlayStation 5 offers ultra-fast load times and stunning visuals with its custom SSD and powerful GPU. Enjoy next-gen gaming experiences.",
+      "price": 499.99,
+      "category": "Gaming",
+      "rating": 4.9,
+      "image": "assets/images/ps5.jpg",
+      "reviews": [
+        {
+          "author": "Charlie Turner",
+          "rating": 5,
+          "text": "Next-gen gaming is here! The PS5 is a game-changer with incredible graphics and fast load times."
+        },
+        {
+          "author": "Sophie Brown",
+          "rating": 5,
+          "text": "The PS5 is fantastic! I've been playing for hours without any issues."
+        }
+      ]
     }
   ]
+  
