@@ -14,6 +14,8 @@ import { ProductModalComponent } from './features/products/product-modal/product
 import { CartPageComponent } from './features/cart/cart-page/cart-page.component';
 import { ProductListComponent } from './features/products/product-list/product-list.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { cartReducer } from './store/cart/cart.reducer';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,12 @@ import { HeaderComponent } from './shared/layout/header/header.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({ cart: cartReducer }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     EffectsModule.forRoot([]),
     FormsModule,
-    MaterialModule
+    MaterialModule,
+  HttpClientModule
 
   ],
   providers: [],

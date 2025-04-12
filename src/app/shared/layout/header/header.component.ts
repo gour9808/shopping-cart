@@ -12,8 +12,10 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   onSearch() {
+    console.log(this.search);
+    
     localStorage.setItem('searchTerm', this.search);
-    this.router.navigate(['/']);
+    this.router.navigate(['/products']);
   }
 
   goToCart() {

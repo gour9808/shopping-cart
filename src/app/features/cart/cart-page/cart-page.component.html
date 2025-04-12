@@ -1,14 +1,15 @@
 <div style="padding: 1rem">
     <h2>Your Cart</h2>
-    <div *ngIf="(cart$ | async)?.length === 0">Your cart is empty.</div>
-    <div *ngFor="let item of cart$ | async" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-      <img [src]="item.image" alt="" width="100">
-      <div>
+    <div *ngIf="(cartItems$ | async)?.length; else emptyCart">
+      <div *ngFor="let item of cartItems$ | async" style="border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem">
+        <img [src]="item.image" style="width: 100px">
         <h3>{{ item.name }}</h3>
         <p>Price: ${{ item.price }}</p>
         <p>Rating: {{ item.rating }}</p>
-        <button mat-button color="warn" (click)="remove(item.id)">Remove</button>
       </div>
+      <h3>Total: ${{ total$ | async }}</h3>
     </div>
-    <!-- <h3 *ngIf="(total$ | async) > 0">Total: ${{ total$ | async }}</h3> -->
+    <ng-template #emptyCart>
+      <p>Your cart is empty.</p>
+    </ng-template>
   </div>

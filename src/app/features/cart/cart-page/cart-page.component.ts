@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { removeFromCart } from 'src/app/store/cart/cart.action';
 import { Product } from 'src/app/store/cart/cart.model';
+import { AppState } from 'src/app/store/cart/cart.reducer';
 import { selectCartItems, selectCartTotal } from 'src/app/store/cart/cart.selectors';
 
 @Component({
@@ -11,10 +12,10 @@ import { selectCartItems, selectCartTotal } from 'src/app/store/cart/cart.select
   styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent {
-  cart$: Observable<Product[]> = this.store.select(selectCartItems);
+  cartItems$: Observable<Product[]> = this.store.select(selectCartItems);
   total$: Observable<number> = this.store.select(selectCartTotal);
 
-  constructor(private store: Store) {}
+  constructor(private store: Store<AppState>) {}
 
   remove(productId: number) {
     this.store.dispatch(removeFromCart({ productId }));

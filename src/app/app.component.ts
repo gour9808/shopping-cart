@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +6,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  searchQuery = '';
 
-  constructor(private router: Router) {}
-
-  onSearch() {
-    this.router.navigate(['/'], { queryParams: { q: this.searchQuery } });
-  }}
+  constructor() {
+    console.log('AppComponent initialized');
+  }
+ }

@@ -4,8 +4,8 @@ import { ProductListComponent } from './features/products/product-list/product-l
 import { CartPageComponent } from './features/cart/cart-page/cart-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'products', pathMatch: 'full' },
-  {path: 'products', component: ProductListComponent},
+  {path: '', redirectTo: 'products', pathMatch: 'full'},
+  { path: 'products', component: ProductListComponent },
   { path: 'cart', component: CartPageComponent }
 ];
 @NgModule({
